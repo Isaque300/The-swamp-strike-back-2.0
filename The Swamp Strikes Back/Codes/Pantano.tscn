@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://musics/musica tema pantano.ogg" type="AudioStream" id=1]
+[ext_resource path="res://Codes/Node2D.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Codes/XP.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Codes/Mapa1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Codes/AudioStreamPlayer.gd" type="Script" id=5]
+
+[node name="Pantano" type="Node"]
+
+[node name="Mapa1" parent="." instance=ExtResource( 4 )]
+
+[node name="Node2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2021, 1057 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+autoplay = true
+script = ExtResource( 5 )
+
+[node name="Node2D2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1904, 1065 )

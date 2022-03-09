@@ -1,0 +1,102 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://image/inventario.png" type="Texture" id=1]
+[ext_resource path="res://image/SairMenu.png" type="Texture" id=2]
+[ext_resource path="res://fonts/poco/Poco.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 43
+font_data = ExtResource( 3 )
+
+[node name="inventario" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -2.0
+margin_right = -9.0
+margin_bottom = -17.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Borda dupla" type="TextureRect" parent="."]
+margin_right = 1284.0
+margin_bottom = 717.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Borda dupla"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -8.0
+margin_bottom = -11.0
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="header" type="HBoxContainer" parent="Borda dupla/VBoxContainer"]
+margin_right = 1276.0
+margin_bottom = 53.0
+
+[node name="MenuTitle" type="Label" parent="Borda dupla/VBoxContainer/header"]
+margin_left = 5.0
+margin_right = 1227.0
+margin_bottom = 53.0
+rect_min_size = Vector2( 100, 0 )
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0.156863, 0.156863, 0.156863, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Inventario"
+
+[node name="ExitButton" type="TextureButton" parent="Borda dupla/VBoxContainer/header"]
+margin_left = 1226.0
+margin_right = 1276.0
+margin_bottom = 53.0
+rect_min_size = Vector2( 50, 25 )
+texture_normal = ExtResource( 2 )
+expand = true
+
+[node name="MainElements" type="HBoxContainer" parent="Borda dupla/VBoxContainer"]
+margin_top = 57.0
+margin_right = 1276.0
+margin_bottom = 682.0
+size_flags_vertical = 3
+
+[node name="LeftMargin" type="Label" parent="Borda dupla/VBoxContainer/MainElements"]
+margin_top = 305.0
+margin_right = 20.0
+margin_bottom = 319.0
+rect_min_size = Vector2( 20, 0 )
+
+[node name="Tabs" type="VBoxContainer" parent="Borda dupla/VBoxContainer/MainElements"]
+margin_left = 24.0
+margin_right = 24.0
+margin_bottom = 625.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Borda dupla/VBoxContainer/MainElements"]
+margin_left = 28.0
+margin_right = 28.0
+margin_bottom = 625.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Borda dupla/VBoxContainer/MainElements/ScrollContainer"]
+
+[node name="Tabs2" type="VBoxContainer" parent="Borda dupla/VBoxContainer/MainElements"]
+margin_left = 32.0
+margin_right = 32.0
+margin_bottom = 625.0
+
+[node name="RightMargin" type="Label" parent="Borda dupla/VBoxContainer/MainElements"]
+margin_left = 36.0
+margin_top = 305.0
+margin_right = 56.0
+margin_bottom = 319.0
+rect_min_size = Vector2( 20, 0 )
+
+[node name="BottonMargin" type="Label" parent="Borda dupla/VBoxContainer"]
+margin_top = 686.0
+margin_right = 1276.0
+margin_bottom = 706.0
+rect_min_size = Vector2( 0, 20 )

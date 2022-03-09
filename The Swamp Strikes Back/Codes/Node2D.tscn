@@ -1,0 +1,86 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://image/jorge andando.png" type="Texture" id=1]
+[ext_resource path="res://Codes/Node2D.gd" type="Script" id=2]
+[ext_resource path="res://musics/Michael-Jackson_s-Moonwalker-_Genesis_-Billie-Jean-8-bit-VRC6-Cover-_Famitracker_.ogg" type="AudioStream" id=3]
+[ext_resource path="res://image/barra de vida.png" type="Texture" id=4]
+[ext_resource path="res://image/nucleo vida.png" type="Texture" id=5]
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 128, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 1 )
+region = Rect2( 64, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 1 )
+region = Rect2( 128, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 1 )
+region = Rect2( 192, 0, 64, 64 )
+
+[sub_resource type="SpriteFrames" id=15]
+animations = [ {
+"frames": [ SubResource( 10 ) ],
+"loop": true,
+"name": "parado",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
+"loop": true,
+"name": "andando",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=9]
+radius = 12.0
+height = 38.0
+
+[node name="Personagem" type="KinematicBody2D"]
+script = ExtResource( 2 )
+
+[node name="AnimetedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 15 )
+animation = "andando"
+frame = 1
+playing = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 0.5, 0.5 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="BarraDeVida" type="TextureProgress" parent="."]
+margin_left = -15.0
+margin_top = -40.0
+margin_right = 17.0
+margin_bottom = -28.0
+max_value = 250.0
+value = 250.0
+texture_under = ExtResource( 5 )
+texture_over = ExtResource( 4 )
+texture_progress = ExtResource( 5 )
+tint_under = Color( 0.227451, 0.2, 0.2, 1 )
+tint_progress = Color( 0.203922, 0.929412, 0.0352941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 15, 0 )
+scale = Vector2( -546.392, 1.65378 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 1 )
+shape = SubResource( 9 )
+
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]

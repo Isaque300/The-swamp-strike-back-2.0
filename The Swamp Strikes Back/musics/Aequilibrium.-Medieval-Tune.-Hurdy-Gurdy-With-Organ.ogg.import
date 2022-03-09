@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Aequilibrium.-Medieval-Tune.-Hurdy-Gurdy-With-Organ.ogg-8f6d8461944355d5cd18a3668f4e8bcb.oggstr"
+
+[deps]
+
+source_file="res://musics/Aequilibrium.-Medieval-Tune.-Hurdy-Gurdy-With-Organ.ogg"
+dest_files=[ "res://.import/Aequilibrium.-Medieval-Tune.-Hurdy-Gurdy-With-Organ.ogg-8f6d8461944355d5cd18a3668f4e8bcb.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

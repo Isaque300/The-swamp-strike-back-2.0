@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://image/fogo lança chamas.png" type="Texture" id=1]
+
+[node name="lança chamas" type="RigidBody2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( 0, -10, -1, -28, 9, -25, 17, -24, 23, -22, 26, -18, 26, -13, 25, -3, 22, 5, 20, 12, 19, 17, 21, 23, 15, 25, 8, 29, 2, 30, -6, 29, -12, 26, -17, 23, -18, 18, -20, 12, -22, 2, -27, -4, -27, -11, -22, -17, -19, -22, -13, -25, -7, -27, -2, -28 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )

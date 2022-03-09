@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/musica tema pantano.ogg-a41467045001a81b03c1c1be0919b315.oggstr"
+
+[deps]
+
+source_file="res://musics/musica tema pantano.ogg"
+dest_files=[ "res://.import/musica tema pantano.ogg-a41467045001a81b03c1c1be0919b315.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

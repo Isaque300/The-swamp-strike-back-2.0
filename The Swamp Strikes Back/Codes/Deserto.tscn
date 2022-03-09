@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://musics/A-Knight_s-Way-To-Die.-Medieval-Tune-_Hurdy-Gurdy-Music_-Instrumental_.ogg" type="AudioStream" id=1]
+[ext_resource path="res://Codes/Node2D.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Codes/mapa deserto.tscn" type="PackedScene" id=3]
+
+[node name="Deserto" type="Node"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+autoplay = true
+
+[node name="mapa deserto" parent="." instance=ExtResource( 3 )]
+
+[node name="Personagem" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2379, 1384 )

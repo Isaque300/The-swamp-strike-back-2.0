@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/A-Knight_s-Way-To-Die.-Medieval-Tune-_Hurdy-Gurdy-Music_-Instrumental_.ogg-d75a89dd4d7d0c98959e967755caa58f.oggstr"
+
+[deps]
+
+source_file="res://musics/A-Knight_s-Way-To-Die.-Medieval-Tune-_Hurdy-Gurdy-Music_-Instrumental_.ogg"
+dest_files=[ "res://.import/A-Knight_s-Way-To-Die.-Medieval-Tune-_Hurdy-Gurdy-Music_-Instrumental_.ogg-d75a89dd4d7d0c98959e967755caa58f.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

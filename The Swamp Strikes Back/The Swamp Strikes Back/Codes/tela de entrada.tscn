@@ -1,0 +1,56 @@
+[gd_scene format=2]
+
+[node name="tela de entrada" type="Node"]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -360.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
+margin_top = 173.0
+margin_right = 1280.0
+margin_bottom = 187.0
+
+[node name="Label" type="Label" parent="VBoxContainer/CenterContainer"]
+margin_left = 490.0
+margin_top = -10.0
+margin_right = 643.0
+margin_bottom = 4.0
+rect_scale = Vector2( 2, 2 )
+text = "The Swamp Strikes Back"
+percent_visible = -0.0526316
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+margin_left = 3.0
+margin_top = 362.0
+margin_right = 1283.0
+margin_bottom = 722.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer2"]
+margin_top = 162.0
+margin_right = 1280.0
+margin_bottom = 197.0
+rect_min_size = Vector2( 0, 35 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer2/TextureButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -711.0
+margin_bottom = -20.0
+rect_scale = Vector2( 2.25, 2.25 )
+bbcode_enabled = true
+bbcode_text = "[center] Text Button [/center]"
+text = " Text Button "
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}

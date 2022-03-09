@@ -1,0 +1,59 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Codes/CenaPricipal.gd" type="Script" id=5]
+
+[node name="CenaPricipal" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = -275.0
+margin_top = -123.0
+margin_right = 339.0
+margin_bottom = 152.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Camera2D" type="Camera2D" parent="VBoxContainer"]
+position = Vector2( 339, 143 )
+current = true
+
+[node name="Sobrevivencia" type="Button" parent="VBoxContainer"]
+margin_top = 91.0
+margin_right = 614.0
+margin_bottom = 111.0
+focus_neighbour_top = NodePath("../sair")
+text = "Modo Sobrevivencia"
+
+[node name="Historia" type="Button" parent="VBoxContainer"]
+margin_top = 115.0
+margin_right = 614.0
+margin_bottom = 135.0
+text = "Modo Historia"
+
+[node name="Personagens" type="Button" parent="VBoxContainer"]
+margin_top = 139.0
+margin_right = 614.0
+margin_bottom = 159.0
+text = "Personagens"
+
+[node name="sair" type="Button" parent="VBoxContainer"]
+margin_top = 163.0
+margin_right = 614.0
+margin_bottom = 183.0
+focus_neighbour_bottom = NodePath("../Sobrevivencia")
+text = "Sair"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="VBoxContainer/Sobrevivencia" to="." method="_on_Sobrevivencia_pressed"]
+[connection signal="pressed" from="VBoxContainer/sair" to="." method="_on_sair_pressed"]

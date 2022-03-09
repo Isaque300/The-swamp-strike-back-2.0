@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://musics/Michael-Jackson_s-Moonwalker-_Genesis_-Billie-Jean-8-bit-VRC6-Cover-_Famitracker_.ogg" type="AudioStream" id=1]
+
+[node name="Music" type="AudioStreamPlayer"]
+stream = ExtResource( 1 )

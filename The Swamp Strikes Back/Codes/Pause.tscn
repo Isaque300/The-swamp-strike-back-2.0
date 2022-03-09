@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Codes/Pause.gd" type="Script" id=1]
+[ext_resource path="res://image/textura preta.png" type="Texture" id=2]
+
+[node name="Pause" type="CanvasLayer"]
+pause_mode = 2
+script = ExtResource( 1 )
+
+[node name="Backgound" type="TextureRect" parent="."]
+modulate = Color( 1, 1, 1, 0.458824 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -964.0
+margin_top = -540.5
+margin_right = 964.0
+margin_bottom = 540.5
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Camera2D" type="Camera2D" parent="Backgound"]
+position = Vector2( 639, 360 )
+scale = Vector2( 1280, 720 )
+
+[node name="Continue" type="Button" parent="."]
+anchor_left = 0.502
+anchor_top = 0.5
+anchor_right = 0.502
+anchor_bottom = 0.5
+margin_left = -5.84003
+margin_top = -62.0
+margin_right = 63.16
+margin_bottom = -42.0
+focus_neighbour_top = NodePath(".")
+text = "Continue"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sair" type="Button" parent="."]
+anchor_left = 0.526
+anchor_top = 0.5
+anchor_right = 0.526
+anchor_bottom = 0.5
+margin_left = -35.92
+margin_top = -21.0
+margin_right = -0.920044
+margin_bottom = -1.0
+focus_neighbour_bottom = NodePath("../Continue")
+text = "sair"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Continue" to="." method="_on_Continue_pressed"]
+[connection signal="pressed" from="sair" to="." method="_on_sair_pressed"]
